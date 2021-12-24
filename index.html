@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vivwport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div class ="text-center pt-5" id="example-1">
+        <button class ="btn btn-outline-dark" @click="counter += 10">👍</button>
+        <button class ="btn btn-outline-dark" @click="counter += 20">😍</button>
+        <button class ="btn btn-outline-dark" @click="counter += 25">😆</button>
+        <button class ="btn btn-outline-dark" @click="counter += 30">😲</button>
+        <button class ="btn btn-outline-dark" @click="counter -= 15">😢</button>
+        <button class ="btn btn-outline-dark" @click="counter -= 30">😤</button>
+        <button class ="btn btn-outline-dark" @click="counter = 0">reset</button>
+        <h1>{{ counter }}</h1>
+      </div>
+     
+</body>
+</html>
+<script>
+  var example1 = new Vue({
+el: "#example-1",
+data: {
+  counter: 0,
+},
+method:{
+  plus: function (x){
+    this.counter += x
+  },
+  reset: function (){
+    this.counter = 0
+  },
+}
+})
+
+</script>
